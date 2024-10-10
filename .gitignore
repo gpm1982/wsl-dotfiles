@@ -3,3 +3,6 @@
 .bash_local
 .bash_logout
 
+# bashrc.d ignore files
+bashrc/.bashrc.d/aliases.rc
+bashrc/.bashrc.d/satellite.rc

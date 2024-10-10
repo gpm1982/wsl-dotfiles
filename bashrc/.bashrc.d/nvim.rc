@@ -1,0 +1,8 @@
+export PATH="/opt/nvim-linux64/bin:$PATH"
+
+# aliases for neovim
+alias nvim-config='cd ~/.config && nvim'
+alias nvim-bashrc='cd ~/.bashrc.d && nvim'
+alias nvim-scripts='cd ~/scripts && nvim'
+alias nvim-icinga-oracle='cd ~/scripts/OsramIcinga/oracle_checks && nvim'
+alias nvim-icinga-mssql='cd ~/scripts/OsramIcinga/mssql_checks && nvim'
