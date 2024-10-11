@@ -8,6 +8,7 @@ return {
 			vim.keymap.set("n", "<leader>sf", builtin.find_files, { desc = "Telescope find files" })
 			vim.keymap.set("n", "<leader>sg", builtin.live_grep, { desc = "Telescope live grep" })
 			vim.keymap.set("n", "<leader>sb", builtin.buffers, { desc = "Telescope buffers" })
+      vim.keymap.set('n', "<leader>ss", builtin.git_status, { desc = "Telescope Git status" })
 			vim.keymap.set("n", "<leader>sh", builtin.help_tags, { desc = "Telescope help tags" })
 		end,
 	},
@@ -20,6 +21,17 @@ return {
 						require("telescope.themes").get_dropdown({}),
 					},
 				},
+        pickers = {
+          live_grep = {
+            additional_args = function(_)
+              return { "--hidden" }
+            end
+          },
+          find_files = { hidden = true },
+        },
+        defaults = {
+          file_ignore_patterns = { ".git", "node_modules", ".venv" }
+        },
 			})
 			require("telescope").load_extension("ui-select")
 		end,
